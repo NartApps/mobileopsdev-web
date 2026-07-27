@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="robots" content="noindex" />
+    <title>404 · mobileops.dev</title>
+
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family:
+          ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas,
+          "Liberation Mono", monospace;
+        background: #050505;
+        color: #f5f5f7;
+        font-synthesis: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+        margin: 0;
+      }
+
+      body {
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 50% 45%, #171717 0, #090909 28%, #050505 62%);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.022;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+
+      main {
+        padding: 24px;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        touch-action: manipulation;
+      }
+
+      .scene {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-height: 40px;
+        animation: appear 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+      }
+
+      .fragment {
+        display: grid;
+        place-items: center;
+        height: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.11);
+        background: rgba(255, 255, 255, 0.055);
+        box-shadow:
+          0 14px 40px rgba(0, 0, 0, 0.45),
+          inset 0 1px rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .fragment-left {
+        width: 48px;
+        border-radius: 999px 7px 7px 999px;
+        transform: rotate(-3deg) translateY(-2px);
+      }
+
+      .fragment-right {
+        width: 48px;
+        border-radius: 7px 999px 999px 7px;
+        transform: rotate(3deg) translateY(2px);
+      }
+
+      .apple {
+        width: 17px;
+        height: 20px;
+        fill: currentColor;
+      }
+
+      .missing {
+        position: relative;
+        width: 34px;
+        height: 1px;
+        background: repeating-linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.26) 0 3px,
+          transparent 3px 7px
+        );
+      }
+
+      .missing::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: -14px;
+        left: 8px;
+        border-radius: 1px;
+        background: rgba(255, 255, 255, 0.3);
+        transform: rotate(24deg);
+        box-shadow:
+          17px 23px rgba(255, 255, 255, 0.18),
+          4px 31px rgba(255, 255, 255, 0.1);
+        animation: drift 2.4s ease-in-out infinite;
+      }
+
+      .cursor {
+        width: 5px;
+        height: 13px;
+        border-radius: 1px;
+        background: #ff5c5c;
+        box-shadow: 0 0 12px rgba(255, 92, 92, 0.55);
+        animation: blink 1.1s steps(1) infinite;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: translateY(6px) scale(0.98);
+          filter: blur(3px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          filter: blur(0);
+        }
+      }
+
+      @keyframes drift {
+        50% {
+          transform: translateY(3px) rotate(36deg);
+          opacity: 0.45;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0.15;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .scene,
+        .missing::before {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="scene" role="img" aria-label="404 — sayfa bulunamadı">
+        <div class="fragment fragment-left">
+          <svg class="apple" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.71 12.37c.02 3.25 2.85 4.34 2.88 4.36-.02.08-.45 1.55-1.49 3.07-.9 1.31-1.84 2.61-3.31 2.64-1.44.03-1.91-.86-3.57-.86-1.65 0-2.17.83-3.54.89-1.42.05-2.51-1.43-3.42-2.74-1.86-2.69-3.28-7.6-1.37-10.92a5.33 5.33 0 0 1 4.52-2.73c1.41-.03 2.74.95 3.57.95.83 0 2.39-1.18 4.02-1.01.69.03 2.61.28 3.84 2.08-.1.06-2.29 1.34-2.13 4.27ZM15.93 4.3c.75-.91 1.26-2.18 1.12-3.44-1.08.04-2.39.72-3.17 1.63-.7.8-1.31 2.1-1.15 3.33 1.21.09 2.44-.61 3.2-1.52Z" />
+          </svg>
+        </div>
+        <span class="missing" aria-hidden="true"></span>
+        <div class="fragment fragment-right">
+          <span class="cursor" aria-hidden="true"></span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
